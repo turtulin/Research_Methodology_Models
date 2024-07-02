@@ -1,0 +1,41 @@
+\section{Results}
+%The results of our analysis showed that ensemble methods, particularly Random Forests and XGBoost, outperformed traditional ML models in terms of accuracy and early detection capabilities. The key findings are summarized in Table \ref{table:comparison}.
+The results of our analysis showed that ensemble methods, particularly RF and LR, outperformed traditional ML models in terms of accuracy and early detection capabilities. The key findings are summarized in Table \ref{table:comparison}.
+
+
+\begin{table}[htbp]
+\caption{Comparison of Machine Learning Algorithms}
+\begin{center}
+\small % Reduce the font size
+\setlength{\tabcolsep}{1pt} % Adjust column separation
+\begin{tabular}{|p{1.6cm}|c|c|c|c|c|}\hline
+\textbf{Algorithm} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 Score} & \textbf{ROC AUC} \\
+\hline
+LR & 0.768 & 0.717 & 0.563 & 0.627 & 0.834 \\
+DT & 0.734 & 0.624 & 0.617 & 0.617 & 0.708 \\
+RF & 0.770 & 0.701 & 0.616 & 0.650 & 0.835 \\
+SVM & 0.767 & 0.714 & 0.556 & 0.622 & 0.832 \\
+GBM & 0.762 & 0.681 & 0.616 & 0.641 & 0.828 \\
+XGBoost & 0.751 & 0.645 & 0.623 & 0.632 & 0.797 \\
+\hline
+\end{tabular}
+\label{table:comparison}
+\end{center}
+\end{table}
+
+The following metrics are the mean of the k-folds (5-folds) evaluation, providing a detailed comparison of various ML algorithms applied to the Pima Indian Diabetes dataset. Each algorithm's performance was measured using several key metrics, including Accuracy, Precision, Recall, F1 Score, and ROC AUC Score.
+
+\begin{itemize}
+\item \textbf{Logistic Regression}: This model achieved an accuracy of 0.768, with a precision of 0.717, and a recall of 0.563. The F1 score was 0.627, and the ROC AUC score was 0.834. LR showed a strong performance in terms of precision and ROC AUC, indicating good overall effectiveness in distinguishing between diabetic and non-diabetic instances.
+\item \textbf{Decision Tree}: This algorithm had an accuracy of 0.734, a precision of 0.624, and a recall of 0.617. The F1 score was 0.617, and the ROC AUC score was 0.708. While the recall was relatively high, the precision and ROC AUC were lower compared to other models, suggesting it was less reliable in distinguishing between the two classes.
+
+\item \textbf{Random Forest}: With an accuracy of 0.770, precision of 0.701, and recall of 0.616, this ensemble method also had an F1 score of 0.650 and a ROC AUC score of 0.835. RF demonstrated a balanced performance across all metrics, showing its robustness and generalization capability.
+
+\item \textbf{SVM}: SVM achieved an accuracy of 0.767, precision of 0.714, and recall of 0.556. The F1 score was 0.622, and the ROC AUC score was 0.832. Although the recall was lower, the high precision and ROC AUC score indicated its strong discriminative power.
+
+\item \textbf{Gradient Boosting}: This model recorded an accuracy of 0.762, precision of 0.681, and recall of 0.616. The F1 score was 0.641, with a ROC AUC score of 0.828. GB provided a good balance of recall and precision, making it effective in identifying true positives while maintaining a reasonable false positive rate.
+
+\item \textbf{XGBoosting}: The XGBoost algorithm had an accuracy of 0.751, a precision of 0.645, and a recall of 0.623. The F1 score was 0.632, and the ROC AUC score was 0.797. While it performed well in recall, its precision and ROC AUC were slightly lower compared to other ensemble methods like RF.
+\end{itemize}
+
+Overall, the ensemble methods demonstrated superior performance across several metrics, including accuracy, precision, recall, F1 score, and ROC AUC. This indicates their robustness in handling the complexity of the diabetes dataset and their ability to generalize well on unseen data.
